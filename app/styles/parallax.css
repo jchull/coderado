@@ -1,0 +1,111 @@
+.parallax {
+  -webkit-perspective: 1px;
+  perspective: 1px;
+  -webkit-perspective-origin: center;
+  -perspective-origin: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.parallax .group {
+  position: relative;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
+
+.parallax .layer {
+  position: absolute;
+  width: 100vw;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.parallax svg {
+  overflow-y: visible;
+}
+
+
+
+#city1 {
+  fill: #111115;
+  -webkit-transform: translateZ(.25px) scale(.75);
+  transform: translateZ(.25px) scale(.75);
+  height: auto;
+}
+
+#city2 {
+  fill: #12161e;
+  -webkit-transform: translateZ(0px) scale(1);
+  transform: translateZ(0px) scale(1);
+}
+
+#city3 {
+  fill: #19202f;
+  -webkit-transform: translateZ(-.25px) scale(1.25);
+  transform: translateZ(-.25px) scale(1.25);
+}
+
+#city4 {
+  fill: #222032;
+  -webkit-transform: translateZ(-.5px) scale(1.5);
+  transform: translateZ(-.5px) scale(1.5);
+}
+
+#city5 {
+  fill: #15172a;
+  -webkit-transform: translateZ(-.75px) scale(1.75);
+  transform: translateZ(-.75px) scale(1.75);
+}
+
+#mountain1 {
+  fill: #202a5c;
+  -webkit-transform: translateZ(-2.25px) scale(3.25);
+  transform: translateZ(-2.25px) scale(3.25);
+}
+
+#mountain2 {
+  fill: #4a4d82;
+  -webkit-transform: translateZ(-2.5px) scale(3.5);
+  transform: translateZ(-2.5px) scale(3.5);
+}
+
+#mountain3 {
+  fill: #5f5d99;
+  -webkit-transform: translateZ(-3px) scale(4);
+  transform: translateZ(-3px) scale(4);
+}
+
+#mountain4 {
+  fill: #8a7d9e;
+
+  -webkit-transform: translateZ(-3.5px) scale(4.5);
+  transform: translateZ(-3.5px) scale(4.5);
+}
+
+#sun {
+  stroke-width: 0;
+  fill: #ff7e00;
+  top: 10px;
+  -webkit-transform: translateZ(-6px) scale(7);
+  transform: translateZ(-6px) scale(7);
+}
+.content-container .md-button.md-default-theme.md-fab {
+  background-color: #ff7e00;
+  color: #FFF;
+}
+
+.city2-front {
+  background: #12161e;
+  width: 100vw;
+  height: 100px;
+  position: relative;
+  top: -4px;
+}
+
+.city-front {
+  position: relative;
+  top: -4px;
+  background-color: #111115;
+  width: 100vw;
+  height: 132px;
+}

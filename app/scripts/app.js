@@ -2,35 +2,43 @@
 
 /**
  * @ngdoc overview
- * @name coderadoApp
+ * @name coderado
  * @description
- * # coderadoApp
+ * # coderado
  *
  * Main module of the application.
  */
 angular
-  .module('coderadoApp', [
+  .module('coderado', [
     'ngAnimate',
     'ngAria',
     'ngCookies',
     'ngResource',
     'ngRoute',
+    'ui.router',
     'ngSanitize',
     'ngTouch'
   ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
+
+  .config(function ($stateProvider, $urlRouterProvider) {
+
+    $urlRouterProvider.otherwise('profile');
+
+    $stateProvider
+      .state('profile', {
+        url: 'profile',
+        templateUrl: 'views/profile.template.html'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
+      .state('contact', {
+        url: 'contact',
+        templateUrl: 'views/contact.template.html'
       })
-      .otherwise({
-        redirectTo: '/'
+      .state('resume', {
+        url: 'resume',
+        templateUrl: 'views/resume.template.html'
+      })
+      .state('about', {
+        url: 'about',
+        templateUrl: 'views/about.template.html'
       });
   });

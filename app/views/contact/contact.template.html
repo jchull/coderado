@@ -1,0 +1,35 @@
+<div ng-controller="ViewContactCtrl">
+<md-card>
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h3>
+                <span>Contact Me</span>
+            </h3>
+        </div>
+    </md-toolbar>
+    <md-card-content>
+        <form ng-submit="sendEmail(fromName,fromEmail,fromMsg)" layout="column">
+            <div layout="row" layout-sm="column" layout-margin >
+                <md-input-container flex>
+                    <label for="fromName">Name</label>
+                    <input type="text" id="fromName" ng-model="fromName">
+                </md-input-container>
+                <md-input-container flex>
+                    <label for="fromEmail">Contact Email</label>
+                    <input type="text" id="fromEmail" ng-model="fromEmail">
+                </md-input-container>
+                <div flex></div>
+            </div>
+            <div layout="column" layout-margin >
+                <md-input-container>
+                    <label for="fromMsg">Message</label>
+                    <input type="text" id="fromMsg" ng-model="fromMsg">
+                </md-input-container>
+
+            </div>
+            <md-button class="md-primary" type="submit">Send</md-button>
+
+        </form>
+    </md-card-content>
+</md-card>
+</div>

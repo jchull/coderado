@@ -5,79 +5,82 @@
   padding: 0.2em 0;
 }
 
+html {
+}
+
 body {
   padding: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+  min-width: 420px;
+  /*max-width: 2048px;*/
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
+a {
+  text-decoration: none;
 }
 
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 10px;
-}
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
-  padding-bottom: 19px;
+.md-toolbar-tools .md-button {
+  margin-left: 5px;
 }
 
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+.footer-container {
+  font-style: italic;
+  color: #333;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  padding: 0 10px;
 }
 
-.container-narrow > hr {
-  margin: 30px 0;
+.md-fab.md-button>div.fa {
+  margin-top: 7px;
 }
 
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-}
-.jumbotron .btn {
-  font-size: 21px;
-  padding: 14px 24px;
+.upper-toolbar a.fa {
+  color: white;
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-}
-.marketing p + h4 {
-  margin-top: 28px;
+.fixed-toolbar {
+  min-height:24px;
+  background-color: rgba(32,42,92,.8);
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: auto;
+  margin: 0;
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
+.fixed-toolbar md-button {
+  margin: 2px 4px;
+}
 
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
+.md-toolbar-tools {
+  background-color: rgba(32,42,92,1);
+  color: #FFF;
+  text-shadow: 0 2px 3px rgba(0,0,0,.27);
+  border-top: 10px solid white;
+  max-height: 75px;
+  height: 75px;
+}
+
+
+
+
+.content-container {
+  background: #FFF;
+  overflow-y: visible;
+  padding: 10px;
+}
+
+.footer-container {
+  background: rgba(255,255,255,.8);
+}
+
+
+
+.main-view {
+  padding: 20px 0;
 }
