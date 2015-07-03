@@ -1,6 +1,8 @@
 (function(){
   'use strict';
 
+  /* Well, this ties it to angular, but I have no reason to break it out currently */
+
   angular
     .module('coderado')
     .directive('scrollLimit', function ($window) {

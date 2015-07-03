@@ -17,7 +17,12 @@ angular
     'ngRoute',
     'ui.router',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ngMaterial',
+    'coderado.views.profile',
+    'coderado.views.resume',
+    'coderado.views.contact',
+    'coderado.views.about'
   ])
 
   .config(function ($stateProvider, $urlRouterProvider) {

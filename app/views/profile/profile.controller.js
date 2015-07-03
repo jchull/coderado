@@ -4,7 +4,7 @@ angular.module('coderado.views.profile', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/profile', {
-    templateUrl: 'profile.template.html',
+    templateUrl: 'views/profile/profile.template.html',
     controller: 'ViewProfileCtrl'
   });
 }])

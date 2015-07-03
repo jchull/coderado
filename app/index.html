@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Coderado</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width" initial-scale="1.0" user-scalable="no">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- webcomponentsjs shim -->
@@ -32,25 +32,25 @@
     <!-- Add your site or application content here -->
     <div class="upper-toolbar fixed-toolbar">
       <div layout="row">
-        <md-button class="md-fab-top-right" aria-label="Twitter">
-          <a class="fa fa-twitter" target="ext" href="http://twitter.com/coderado"></a>
+        <md-button class="" aria-label="Twitter">
+          <a class="fa fa-twitter fa-lg" target="ext" href="http://twitter.com/coderado"></a>
         </md-button>
-        <md-button class="md-fab-top-right" aria-label="Linked In">
-          <a class="fa fa-linkedin" target="ext" href="http://www.linkedin.com/in/jeremyhull"></a>
+        <md-button class="" aria-label="Linked In">
+          <a class="fa fa-linkedin fa-lg" target="ext" href="http://www.linkedin.com/in/jeremyhull"></a>
         </md-button>
-        <md-button class="md-fab-top-right" aria-label="GitHub">
-          <a class="fa fa-github" target="ext" href="http://github.com/jchull"></a></md-button>
+        <md-button class="" aria-label="GitHub">
+          <a class="fa fa-github fa-lg" target="ext" href="http://github.com/jchull"></a></md-button>
       </div>
 
     </div>
 
-    <div id="denver-parallax">
+    <div id="denver-parallax" class="fullscreen">
       <!-- parallax template gets inserted here -->
 
     </div>
 
 
-    <!-- toolbar scrolls to top -->
+    <!-- toolbar scrolls to top
     <div class="content-container">
 
       <div class="md-toolbar-tools" layout="row" layout-sm="column">
@@ -82,8 +82,9 @@
 
 
     <md-content class="main-view" ng-view>
-      <!-- Dynamic ui-router content appears here -->
+      <!-- Dynamic ui-router content appears here !!
     </md-content>
+    -->
 
     <div class="footer-container" layout="row">
       <div flex></div>
@@ -115,7 +116,6 @@
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-material/angular-material.js"></script>
     <script src="bower_components/ui-route/release/angular-ui-router.js"></script>
-
     <!-- endbower -->
     <!-- endbuild -->
 

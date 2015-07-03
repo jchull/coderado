@@ -4,7 +4,7 @@ angular.module('coderado.views.resume', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/resume', {
-    templateUrl: 'resume.template.html',
+    templateUrl: 'views/resume/resume.template.html',
     controller: 'ViewResumeCtrl'
   });
 }])

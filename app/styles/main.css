@@ -53,8 +53,12 @@ a {
   margin: 0;
 }
 
-.fixed-toolbar md-button {
-  margin: 2px 4px;
+.upper-toolbar .md-button {
+  min-width: 30px;
+  min-height: 30px;
+  padding: 0;
+  margin: 0;
+  left: 10px;
 }
 
 .md-toolbar-tools {
@@ -66,9 +70,6 @@ a {
   height: 75px;
 }
 
-
-
-
 .content-container {
   background: #FFF;
   overflow-y: visible;
@@ -79,8 +80,14 @@ a {
   background: rgba(255,255,255,.8);
 }
 
-
-
 .main-view {
   padding: 20px 0;
+}
+
+.fullscreen {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: auto;
+  width: 100%;
 }
