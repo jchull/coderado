@@ -2,12 +2,14 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Coderado</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <script src="bower_components/webcomponentsjs/HTMLImports.js"></script>
+    <!-- webcomponentsjs shim -->
+    <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+
 
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -18,6 +20,8 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+
+    <!-- webcomponents template import-->
     <link rel="import" href="web-components/denver_parallax/denver_parallax.template.html">
   </head>
   <body ng-app="coderado">
@@ -28,21 +32,23 @@
     <!-- Add your site or application content here -->
     <div class="upper-toolbar fixed-toolbar">
       <div layout="row">
-        <md-button class="md-fab-top-right" aria-label="Twitter"><a class="fa fa-twitter" target="ext"
-                                                                    href="http://twitter.com/coderado"></a>
+        <md-button class="md-fab-top-right" aria-label="Twitter">
+          <a class="fa fa-twitter" target="ext" href="http://twitter.com/coderado"></a>
         </md-button>
-        <md-button class="md-fab-top-right" aria-label="Linked In"><a class="fa fa-linkedin" target="ext"
-                                                                      href="http://www.linkedin.com/in/jeremyhull"></a>
+        <md-button class="md-fab-top-right" aria-label="Linked In">
+          <a class="fa fa-linkedin" target="ext" href="http://www.linkedin.com/in/jeremyhull"></a>
         </md-button>
-        <md-button class="md-fab-top-right" aria-label="GitHub"><a class="fa fa-github" target="ext"
-                                                                   href="http://github.com/jchull"></a></md-button>
+        <md-button class="md-fab-top-right" aria-label="GitHub">
+          <a class="fa fa-github" target="ext" href="http://github.com/jchull"></a></md-button>
       </div>
 
     </div>
 
-    <div class="parallax_container">
+    <div id="denver-parallax">
       <!-- parallax template gets inserted here -->
+
     </div>
+
 
     <!-- toolbar scrolls to top -->
     <div class="content-container">
@@ -80,13 +86,12 @@
     </md-content>
 
     <div class="footer-container" layout="row">
-      <div>coderado version: <span app-version></span></div>
       <div flex></div>
       <div>Design + Dev + Art by Jeremy Hull</div>
     </div>
 
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID
      <script>
        !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
        (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
@@ -96,6 +101,7 @@
        ga('create', 'UA-XXXXX-X');
        ga('send', 'pageview');
     </script>
+    -->
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
@@ -109,6 +115,7 @@
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-material/angular-material.js"></script>
     <script src="bower_components/ui-route/release/angular-ui-router.js"></script>
+
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -118,6 +125,17 @@
         <script src="views/contact/contact.controller.js"></script>
         <script src="views/profile/profile.controller.js"></script>
         <script src="views/resume/resume.controller.js"></script>
-        <!-- endbuild -->
+
+    <script>
+
+      document._currentScript = document._currentScript || document.currentScript;
+
+      var link = document.querySelector('link[rel="import"]');
+      var parallax = link.import.querySelector('#parallax-template');
+
+      var container = document.querySelector('#denver-parallax');
+      container.appendChild(parallax.content.cloneNode(true));
+    </script>
+    <!-- endbuild -->
 </body>
 </html>
