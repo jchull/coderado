@@ -13,7 +13,7 @@
         var limitElement = raw.getElementsByClassName('limit');
         var limit = 0;
         angular.element(element).bind('scroll', function () {
-          if(limitElement[0].getBoundingClientRect().top<40){
+          if(limitElement[0].getBoundingClientRect().top<1){
             if(limit>0)
               raw.scrollTop = limit;
             else
@@ -21,11 +21,6 @@
 
 
           }
-          /*console.log(raw.scrollTop + raw.offsetHeight);
-           console.log(raw.scrollHeight);
-           if (raw.scrollTop + raw.offsetHeight > raw.scrollHeight) {
-           scope.$apply();
-           }*/
         });
       }
     };

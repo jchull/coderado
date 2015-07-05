@@ -128,13 +128,18 @@
 
     <script>
 
-      document._currentScript = document._currentScript || document.currentScript;
+      <!-- handle resizing issues on mobile devices -->
+      window.onorientationchange = function() { window.location.reload(); };
 
-      var link = document.querySelector('link[rel="import"]');
-      var parallax = link.import.querySelector('#parallax-template');
+      window.addEventListener('HTMLImportsLoaded', function() {
+        var link = document.querySelector('link[rel=import]');
+        var parallax = link.import.getElementById('parallax-template');
 
-      var container = document.querySelector('#denver-parallax');
-      container.appendChild(parallax.content.cloneNode(true));
+        var container = document.getElementById('denver-parallax');
+        container.appendChild(document.importNode(parallax.content, true));
+
+      });
+
     </script>
     <!-- endbuild -->
 </body>
