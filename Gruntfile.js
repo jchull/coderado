@@ -117,23 +117,11 @@ module.exports = function (grunt) {
     },
 
     // Make sure code styles are up to par and there are no obvious mistakes
-    jshint: {
+    eslint: {
       options: {
-        jshintrc: '.jshintrc',
-        reporter: require('jshint-stylish')
+        configFile: 'eslint.json'
       },
-      all: {
-        src: [
-          'Gruntfile.js',
-          '<%= yeoman.app %>/scripts/{,*/}*.js'
-        ]
-      },
-      test: {
-        options: {
-          jshintrc: 'test/.jshintrc'
-        },
-        src: ['test/spec/{,*/}*.js']
-      }
+      target: ['<%= yeoman.app %>/scripts/{,*/}*.js']
     },
 
     // Empties folders to start fresh
@@ -424,6 +412,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('test', [
     'clean:server',
+    'eslint',
     'wiredep',
     'concurrent:test',
     'autoprefixer',
@@ -450,7 +439,7 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('default', [
-    'newer:jshint',
+    'eslint',
     'test',
     'build'
   ]);

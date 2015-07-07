@@ -1,4 +1,5 @@
-'use strict';
+(function() {
+"use strict";
 
 /**
  * @ngdoc overview
@@ -8,44 +9,45 @@
  *
  * Main module of the application.
  */
+/* global angular */
 angular
-  .module('coderado', [
-    'ngAnimate',
-    'ngAria',
-    'ngCookies',
-    'ngResource',
-    'ngRoute',
-    'ui.router',
-    'ngSanitize',
-    'ngTouch',
-    'ngMaterial',
-    'coderado.views.profile',
-    'coderado.views.resume',
-    'coderado.views.contact',
-    'coderado.views.about'
+  .module("coderado", [
+    "ngAnimate",
+    "ngAria",
+    "ngCookies",
+    "ngResource",
+    "ngRoute",
+    "ui.router",
+    "ngSanitize",
+    "ngTouch",
+    "ngMaterial",
+    "coderado.views.profile",
+    "coderado.views.resume",
+    "coderado.views.contact",
+    "coderado.views.about"
   ])
 
   .config(function ($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('profile');
+    $urlRouterProvider.otherwise("profile");
 
     $stateProvider
-      .state('profile', {
-        url: 'profile',
-        templateUrl: 'views/profile.template.html'
+      .state("profile", {
+        url: "profile",
+        templateUrl: "views/profile.template.html"
       })
-      .state('contact', {
-        url: 'contact',
-        templateUrl: 'views/contact.template.html'
+      .state("contact", {
+        url: "contact",
+        templateUrl: "views/contact.template.html"
       })
-      .state('resume', {
-        url: 'resume',
-        templateUrl: 'views/resume.template.html'
+      .state("resume", {
+        url: "resume",
+        templateUrl: "views/resume.template.html"
       })
-      .state('about', {
-        url: 'about',
-        templateUrl: 'views/about.template.html'
+      .state("about", {
+        url: "about",
+        templateUrl: "views/about.template.html"
       });
   });
 
-
+})();
