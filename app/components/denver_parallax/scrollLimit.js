@@ -6,7 +6,6 @@
   var handleScroll = function (event) {
     var limitElement = this.querySelector('.limit');
       if(limitElement.getBoundingClientRect().top<1){
-        console.log(this.scrollTop);
         if(limit>0) {
           this.scrollTop = limit-1;
         }

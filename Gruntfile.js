@@ -12,6 +12,8 @@ module.exports = function (grunt) {
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
 
+  grunt.loadNpmTasks('grunt-angular-templates');
+
   // Automatically load required Grunt tasks
   require('jit-grunt')(grunt, {
     useminPrepare: 'grunt-usemin'
@@ -121,7 +123,7 @@ module.exports = function (grunt) {
       options: {
         configFile: 'eslint.json'
       },
-      target: ['<%= yeoman.app %>/scripts/{,*/}*.js']
+      target: ['<%= yeoman.app %>/{scripts,components}/**/*.js']
     },
 
     // Empties folders to start fresh
@@ -331,6 +333,9 @@ module.exports = function (grunt) {
     // Replace Google CDN references
     cdnify: {
       dist: {
+        options: {
+          base: "http://coderado.co"
+        },
         html: ['<%= yeoman.dist %>/*.html']
       }
     },
