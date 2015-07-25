@@ -51,14 +51,18 @@
     <!-- Add your site or application content here -->
     <div class="upper-toolbar fixed-toolbar">
       <div layout="row">
-        <md-button class="" aria-label="Twitter">
+        <md-button class="" aria-label="Twitter" co-tooltip="Twitter">
           <a class="fa fa-twitter fa-lg" target="ext" href="http://twitter.com/coderado"></a>
         </md-button>
-        <md-button class="" aria-label="Linked In">
+        <md-button class="" aria-label="LinkedIn" co-tooltip="LinkedIn">
           <a class="fa fa-linkedin fa-lg" target="ext" href="http://www.linkedin.com/in/jeremyhull"></a>
         </md-button>
-        <md-button class="" aria-label="GitHub">
-          <a class="fa fa-github fa-lg" target="ext" href="http://github.com/jchull"></a></md-button>
+        <md-button class="" aria-label="GitHub" co-tooltip="GitHub">
+          <a class="fa fa-github fa-lg" target="ext" href="http://github.com/jchull"></a>
+        </md-button>
+        <md-button class="" aria-label="CodePen" co-tooltip="CodePen">
+          <a class="fa fa-codepen fa-lg" target="ext" href="http://codepen.io/coderado"></a>
+        </md-button>
       </div>
 
     </div>
@@ -159,6 +163,7 @@
       });
     </script>
 
+    <script src="components/coTooltip/coTooltip.directive.js"></script>
     <!-- endbuild -->
 </body>
 </html>
