@@ -39,13 +39,11 @@
       'scroll',
       handleScroll(limitElement)
     );
+
+    //disable scrolling for touch (for now)
     scrollArea.addEventListener('touchmove', function(evt) {
-      //In this case, the default behavior is scrolling the body, which
-      //would result in an overflow.  Since we don't want that, we preventDefault.
-      if(!evt._isScroller) {
         evt.preventDefault()
-      }
-    })
+    });
   }
 
 })();
