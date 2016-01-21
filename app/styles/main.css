@@ -61,6 +61,11 @@ a {
   left: 10px;
 }
 
+.upper-toolbar a.md-button:not([disabled]):hover,
+.upper-toolbar .md-button:not([disabled]):hover {
+  color: #ff7e00;
+}
+
 .md-toolbar-tools {
   background-color: rgba(32,42,92,1);
   color: #FFF;

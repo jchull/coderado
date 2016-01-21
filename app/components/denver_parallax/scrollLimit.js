@@ -24,9 +24,8 @@
       else {
         // anything to do if scrolling back the other way?
       }
-    }
-
-  }
+    };
+  };
 
   var scrollArea = document.querySelector('div[scroll-limit]');
 

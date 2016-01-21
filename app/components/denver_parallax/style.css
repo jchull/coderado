@@ -111,14 +111,13 @@
 }
 
 .city-front:after {
-  content: "coming soon...";
+  content: "Full Stack Engineer: AngularJS/Spring";
   position: relative;
   top: 320px;
-  color: yellow;
+  color: #ff7e00;
   font-size: 36px;
   font-weight: 700;
   font-family: Menlo, Monaco, Consolas, "Lucida Console", monospace;
-  opacity: .4;
   display: inline-block;
   text-align: center;
   width: 100%;

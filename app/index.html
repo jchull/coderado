@@ -2,12 +2,14 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Coderado Software Consulting</title>
-    <meta name="description" content="Denver Colorado expert Software Engineer consulting services throughout the full stack with Java, JavaScript, HTML/CSS, AngularJS">
+    <title>Coderado Limited - Software Consulting</title>
+    <meta name="description" content="Denver Colorado expert Software Engineer consulting services specializing in Java, JavaScript, HTML/CSS, AngularJS">
     <meta name="viewport" content="width=device-width" initial-scale="1.0" user-scalable="no">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <!-- webcomponentsjs shim -->
+    <meta name="google-site-verification" content="8tplRmBJHG2kPPSgnkD3bRGgL0wUBe5wIGUxVOFMUAQ" />
+
+    <!-- webcomponentsjs shim needs to be loaded early -->
     <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
 
 
@@ -52,16 +54,16 @@
     <div class="upper-toolbar fixed-toolbar">
       <div layout="row">
         <md-button class="" aria-label="Twitter" co-tooltip="Twitter">
-          <a class="fa fa-twitter fa-lg" target="ext" href="http://twitter.com/coderado" onclick="ga('send','event','Outgoing Links', 'click', 'http://twitter.com/coderado');"></a>
+          <a class="fa fa-twitter fa-lg" target="ext" href="http://twitter.com/coderado" onclick="ga('send','event','link', 'click', 'twitter');"></a>
         </md-button>
         <md-button class="" aria-label="LinkedIn" co-tooltip="LinkedIn">
-          <a class="fa fa-linkedin fa-lg" target="ext" href="http://www.linkedin.com/in/jeremyhull" onclick="ga('send','event','Outgoing Links','click','http://www.linkedin.com/in/jeremyhull');"></a>
+          <a class="fa fa-linkedin fa-lg" target="ext" href="http://www.linkedin.com/in/jeremyhull" onclick="ga('send','event','link','click','linkedin');"></a>
         </md-button>
         <md-button class="" aria-label="GitHub" co-tooltip="GitHub">
-          <a class="fa fa-github fa-lg" target="ext" href="http://github.com/jchull" onclick="ga('send','event','Outgoing Links','click', 'http://github.com/jchull');"></a>
+          <a class="fa fa-github fa-lg" target="ext" href="http://github.com/jchull" onclick="ga('send','event','link','click', 'github');"></a>
         </md-button>
         <md-button class="" aria-label="CodePen" co-tooltip="CodePen">
-          <a class="fa fa-codepen fa-lg" target="ext" href="http://codepen.io/coderado" onclick="ga('send','event','Outgoing Links','click', 'http://codepen.io/coderado');"></a>
+          <a class="fa fa-codepen fa-lg" target="ext" href="http://codepen.io/coderado" onclick="ga('send','event','link','click', 'codepen');"></a>
         </md-button>
       </div>
 
@@ -134,6 +136,9 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-loader/angular-loader.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-scenario/angular-scenario.js"></script>
     <script src="bower_components/angular-material/angular-material.js"></script>
     <script src="bower_components/ui-route/release/angular-ui-router.js"></script>
     <!-- endbower -->
