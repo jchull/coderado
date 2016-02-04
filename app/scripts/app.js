@@ -19,7 +19,6 @@ angular
     "ngRoute",
     "ui.router",
     "ngSanitize",
-    "ngTouch",
     "ngMaterial",
     "coderado.views.profile",
     "coderado.views.resume",

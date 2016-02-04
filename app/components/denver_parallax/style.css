@@ -5,7 +5,7 @@
   -perspective-origin: center;
   overflow-y: scroll;
   overflow-x: hidden;
-  margin-top: 36px;
+  margin-top: 0;
   height: auto;
 }
 
