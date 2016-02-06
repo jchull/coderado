@@ -1,12 +1,15 @@
 # coderado
 
-
-
-#Technology
+# Tools
 - AngularJS
+- Angular Material
 - webpack
-- SVG
-- CSS
 - web components
+
+# Technology
+- JavaScript
+- HTML
+- CSS
+- SVG
 
 ![Landing Page](coderado-construction-view.png)
