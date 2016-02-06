@@ -15,7 +15,7 @@
       app: [ './scripts/ng-boot.js']
     },
     output: {
-      path: APP,
+      path: APP + '/build',
       filename: "bundle.js"
     },
     resolve: {

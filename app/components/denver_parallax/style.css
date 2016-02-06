@@ -111,13 +111,13 @@
 }
 
 .city-front:after {
-  content: "Full Stack Engineer: AngularJS/Spring";
+  content: "Independent Full Stack Software Engineer";
   position: relative;
   top: 320px;
   color: #ff7e00;
-  font-size: 36px;
-  font-weight: 700;
-  font-family: Menlo, Monaco, Consolas, "Lucida Console", monospace;
+  font-size: 32px;
+  font-weight: 500;
+  font-family: "Lucida Console", monospace;
   display: inline-block;
   text-align: center;
   width: 100%;
