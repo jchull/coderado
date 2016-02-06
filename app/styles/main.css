@@ -96,3 +96,14 @@ a {
   height: auto;
   width: 100%;
 }
+
+.landing-message {
+  transform: translateZ(0.25px) scale(1);
+  padding: 200px 20px;
+  color: #FAFAFA;
+  display: inline-block;
+}
+
+.landing-message ul {
+  list-style: none;
+}

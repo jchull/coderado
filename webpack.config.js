@@ -59,11 +59,6 @@
     },
     plugins: [
       new cleanPlugin(['dist']),
-      new webpack.DefinePlugin({
-        MODE: {
-          production: process.env.NODE_ENV === 'production'
-        }
-      }),
       new ngAnnotatePlugin({
         add: true
       })

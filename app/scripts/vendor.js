@@ -2,6 +2,7 @@
   "use strict";
   module.exports = function () {
     /* JS */
+    require('webcomponents.js');
     require('angular');
     require('angular-animate');
     require('angular-aria');
@@ -12,7 +13,6 @@
     require('angular-messages');
     require('angular-ui-router');
     require('angular-material');
-    require('webcomponents.js');
 
     /* Styles*/
     require('angular-material/angular-material.css');
