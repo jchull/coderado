@@ -9,8 +9,9 @@
  *
  * Main module of the application.
  */
+
 /* global angular */
-angular
+  module.exports =  angular
   .module("coderado", [
     "ngAnimate",
     "ngAria",
@@ -18,12 +19,12 @@ angular
     "ngResource",
     "ngRoute",
     "ui.router",
-    "ngSanitize",
-    "ngMaterial",
+    "ngMaterial"
+    /*,
     "coderado.views.profile",
     "coderado.views.resume",
     "coderado.views.contact",
-    "coderado.views.about"
+    "coderado.views.about"*/
   ])
 
   .config(function ($stateProvider, $urlRouterProvider) {

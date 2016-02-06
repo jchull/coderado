@@ -10,7 +10,7 @@ angular.module('coderado.views.contact', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/contact', {
-    templateUrl: 'views/contact/contact.template.html',
+    template: require('views/contact/contact.template.html'),
     controller: 'ViewContactCtrl'
   });
 }])
