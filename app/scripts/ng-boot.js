@@ -2,7 +2,8 @@
   "use strict";
   /*jshint browser:true */
   require('./vendor')();
-  require('../styles/main.css');
+  // loading this directly to prevent flashing on load
+  // require('../styles/main.css');
 
 
 // load the main app file
