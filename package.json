@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "angular-mocks": "^1.5.0",
+    "browser-sync": "^2.11.2",
     "clean-webpack-plugin": "^0.1.8",
     "css-loader": "^0.23.1",
     "eslint": "^0.24.0",
@@ -36,6 +37,7 @@
   },
   "scripts": {
     "serve": "webpack-dev-server --content-base app/ --hot",
+    "browser-sync": "browser-sync start --server app --files 'styles/*.css' --index 'index.html' ",
     "build": "webpack -d --display-modules --progress --colors",
     "dist": "webpack -p --display-modules --progress --colors"
   }
