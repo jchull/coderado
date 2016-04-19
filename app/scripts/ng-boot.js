@@ -1,18 +1,18 @@
-(function () {
+(function() {
   "use strict";
-  /*jshint browser:true */
+  /* jshint browser:true */
   require('./vendor')();
   // loading this directly to prevent flashing on load
   // require('../styles/main.css');
 
-
-// load the main app file
+  // load the main app file
   var appModule = require('../index');
 
-// replaces ng-app="appName"
-  angular.element(document).ready(function () {
+  // replaces ng-app="appName"
+  angular.element(document).ready(function() {
     angular.bootstrap(document, [appModule.name], {
-      //strictDi: true
+      // strictDi: true
     });
   });
+
 })();

@@ -54,6 +54,11 @@
         {
           test: /\.html$/,
           loader: 'raw'
+        },
+        {
+          test: /\.js$/,
+          loader: "eslint-loader",
+          exclude: /node_modules/
         }
       ]
     },

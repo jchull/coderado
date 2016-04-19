@@ -1,5 +1,5 @@
 (function() {
-"use strict";
+  "use strict";
 
 /**
  * @ngdoc overview
@@ -11,7 +11,7 @@
  */
 
 /* global angular */
-  module.exports =  angular
+  module.exports = angular
   .module("coderado", [
     "ngAnimate",
     "ngAria",
@@ -20,17 +20,15 @@
     "ngRoute",
     "ui.router",
     "ngMaterial"
-    /*,
+    /* ,
     "coderado.views.profile",
     "coderado.views.resume",
     "coderado.views.contact",
     "coderado.views.about"*/
   ])
 
-  .config(function ($stateProvider, $urlRouterProvider) {
-
+  .config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise("profile");
-
     $stateProvider
       .state("profile", {
         url: "profile",

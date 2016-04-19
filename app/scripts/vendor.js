@@ -1,6 +1,6 @@
-(function () {
+(function() {
   "use strict";
-  module.exports = function () {
+  module.exports = function() {
     /* JS */
     require('webcomponents.js');
     require('angular');
@@ -14,7 +14,7 @@
     require('angular-ui-router');
     require('angular-material');
 
-    /* Styles*/
+    /* Styles */
     require('angular-material/angular-material.css');
     require('font-awesome/css/font-awesome.css');
   };
