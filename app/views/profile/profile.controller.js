@@ -1,14 +1,11 @@
-'use strict';
+(function() {
+  "use strict";
 
-angular.module('coderado.views.profile', ['ngRoute'])
+  angular.module("coderado.views.profile", [])
 
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/profile', {
-    templateUrl: 'views/profile/profile.template.html',
-    controller: 'ViewProfileCtrl'
-  });
-}])
+    .controller("ViewProfileController", function($log) {
+      $log.info("loading Profile controller...");
+      // var ctrl = this;
+    });
 
-.controller('ViewProfileCtrl', [function() {
-
-}]);
+})();

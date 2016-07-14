@@ -3,7 +3,7 @@
   perspective: 1px;
   -webkit-perspective-origin: center;
   -perspective-origin: center;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
   margin-top: 0;
   height: auto;
@@ -25,7 +25,13 @@
 .parallax svg {
 }
 
-
+/* TODO: investigate Safari-only SVG rendering issues */
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
+{ @media {
+  .parallax {
+    overflow-y: hidden;
+  }
+}}
 
 #city1 {
   fill: #111115;

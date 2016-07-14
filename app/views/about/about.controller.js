@@ -1,14 +1,10 @@
-'use strict';
+(function() {
+  "use strict";
 
-angular.module('coderado.views.about', ['ngRoute'])
+  angular.module("coderado.views.about", [])
 
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/about', {
-    templateUrl: 'views/about/about.template.html',
-    controller: 'ViewAboutCtrl'
-  });
-}])
-
-.controller('ViewAboutCtrl', [function($scope) {
-
-}]);
+    .controller("ViewAboutController", function($log) {
+      // var ctrl = this;
+      $log.info("ViewAboutController loading...");
+    });
+})();

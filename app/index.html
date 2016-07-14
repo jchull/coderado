@@ -37,19 +37,23 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="upper-toolbar fixed-toolbar">
+    <div class="upper-toolbar fixed-toolbar" ng-cloak>
       <div layout="row">
-        <md-button class="" aria-label="Twitter" co-tooltip="Twitter">
+        <md-button class="" aria-label="Twitter">
           <a class="fa fa-twitter fa-lg" target="ext" href="http://twitter.com/coderado" onclick="ga('send','event','link', 'click', 'twitter');"></a>
+          <md-tooltip md-direction="down">Twitter: @coderado</md-tooltip>
         </md-button>
-        <md-button class="" aria-label="LinkedIn" co-tooltip="LinkedIn">
+        <md-button class="" aria-label="LinkedIn">
           <a class="fa fa-linkedin fa-lg" target="ext" href="http://www.linkedin.com/in/jeremyhull" onclick="ga('send','event','link','click','linkedin');"></a>
+          <md-tooltip md-direction="down">LinkedIn: jeremyhull</md-tooltip>
         </md-button>
-        <md-button class="" aria-label="GitHub" co-tooltip="GitHub">
+        <md-button class="" aria-label="GitHub">
           <a class="fa fa-github fa-lg" target="ext" href="http://github.com/jchull" onclick="ga('send','event','link','click', 'github');"></a>
+          <md-tooltip md-direction="down">GitHub: jchull</md-tooltip>
         </md-button>
-        <md-button class="" aria-label="CodePen" co-tooltip="CodePen">
+        <md-button class="" aria-label="CodePen">
           <a class="fa fa-codepen fa-lg" target="ext" href="http://codepen.io/coderado" onclick="ga('send','event','link','click', 'codepen');"></a>
+          <md-tooltip md-direction="down">CodePen: coderado</md-tooltip>
         </md-button>
       </div>
 
@@ -61,30 +65,22 @@
 
     <div class="landing-message" ng-cloak>
       <h2>Full-Stack Software Engineer</h2>
-      <h4>Available in June, 2016</h4>
       <div>
-        Expertise in:
         <ul>
           <li>AngularJS</li>
           <li>JavaScript</li>
           <li>Java</li>
           <li>HTML/DOM</li>
-          <li>CSS</li>
+          <li>CSS/CSSOM</li>
           <li>SVG</li>
           <li>REST</li>
           <li>JPA/Hibernate/Spring</li>
           <li>Java EE</li>
-          <li>Web Applications</li>
         </ul>
       </div>
-
-      <!--<div>-->
-        <!--<ul>-->
-          <!--<li>test</li>-->
-        <!--</ul>-->
-      <!--</div>-->
     </div>
 
+    <div ui-view style="display: none;"></div>
     <!-- toolbar scrolls to top
     <div class="content-container">
 
@@ -127,17 +123,6 @@
       <div>Design + Dev + Art by Jeremy Hull</div>
     </div>
 
-    <script>
-      !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-          (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-        r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-      }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-65008875-1');
-      ga('send', 'pageview');
-    </script>
-
-    <script src="build/bundle.js"></script>
 
     <script>
 
@@ -151,6 +136,20 @@
         var container = document.getElementById('denver-parallax');
         container.appendChild(document.importNode(parallax.content, true));
       });
+    </script>
+
+
+    <script src="vendor.bundle.js"></script>
+    <script src="app.bundle.js"></script>
+
+    <script>
+      !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+          (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+        r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+      }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-65008875-1');
+      ga('send', 'pageview');
     </script>
 </body>
 </html>

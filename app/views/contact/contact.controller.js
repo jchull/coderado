@@ -1,20 +1,16 @@
-'use strict';
+(function() {
+  "use strict";
 
-function ViewContactCtrl ($scope) {
-    $scope.sendEmail = function (fromName, fromEmail, fromMsg) {
-        console.log(fromName);
-    }
-}
+  angular.module("coderado.views.contact", [])
 
-angular.module('coderado.views.contact', ['ngRoute'])
+    .controller("ViewContactController", function ViewContactController($log) {
+      var ctrl = this;
 
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/contact', {
-    template: require('views/contact/contact.template.html'),
-    controller: 'ViewContactCtrl'
-  });
-}])
+      ctrl.sendEmail = function(fromName, fromEmail, fromMsg) {
+        $log.debug(fromName);
+        $log.debug(fromEmail);
+        $log.debug(fromMsg);
+      };
 
-.controller('ViewContactCtrl', ViewContactCtrl);
-
-
+    });
+})();

@@ -115,3 +115,14 @@ a {
   list-style: none;
 }
 
+.safari_only {
+  display: none;
+}
+
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
+{ @media {
+  .safari_only {
+    display: block;
+  }
+
+}}

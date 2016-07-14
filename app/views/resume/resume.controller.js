@@ -1,14 +1,10 @@
-'use strict';
+(function() {
+  "use strict";
 
-angular.module('coderado.views.resume', ['ngRoute'])
+  angular.module("coderado.views.resume", [])
 
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/resume', {
-    templateUrl: 'views/resume/resume.template.html',
-    controller: 'ViewResumeCtrl'
-  });
-}])
+    .controller("ViewResumeController", function() {
 
-.controller('ViewResumeCtrl', [function() {
+    });
+})();
 
-}]);
