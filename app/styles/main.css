@@ -119,6 +119,18 @@ a {
   display: none;
 }
 
+.element_alert {
+  position: absolute;
+  color: red;
+  font-weight: 700;
+  margin: auto;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  padding: 80px;
+}
+
 @media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
 { @media {
   .safari_only {
