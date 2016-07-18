@@ -34,7 +34,7 @@
       // output is set to root because the middleware will use that
       // non-dev builds must set the path (see grunt webpack: build-dist)
       // set the path to ".tmp" if you want to run directly currently
-      path: "/", // if you see " Fatal error: invalid argument " then this is not set to root "/"
+      path: "build/", // if you see " Fatal error: invalid argument " then this is not set to root "/"
       publicPath: "/",
       filename: "[name].bundle.js"
       //https://webpack.github.io/docs/configuration.html#output-devtoolmodulefilenametemplate
