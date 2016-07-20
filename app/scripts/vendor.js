@@ -16,7 +16,9 @@
 
   /* Styles */
   require('angular-material/angular-material.css');
-  require('font-awesome/css/font-awesome.css');
+
+  /* Icons */
+  require('svg-social-icons');
 
   module.exports = "vendor";
 })();

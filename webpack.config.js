@@ -77,10 +77,14 @@
           test: /\.html$/,
           loader: 'raw'
         },
+        // {
+        //   test: /\.js$/,
+        //   loader: "eslint-loader",
+        //   exclude: /node_modules/
+        // },
         {
-          test: /\.js$/,
-          loader: "eslint-loader",
-          exclude: /node_modules/
+          test: /\.json$/,
+          loader: "json-loader"
         }
       ],
       noParse: [
@@ -88,9 +92,7 @@
       ]
     },
     plugins: [
-      // new cleanPlugin(['dist']),
-      //  new webpack.IgnorePlugin(/angular$/),
-
+   //   new WebpackCleanPlugin(['dist']),
       new webpack.PrefetchPlugin(ROOT, './node_modules/angular/angular'),
       new (require('ng-annotate-webpack-plugin'))({add: true}),
       new webpack.optimize.OccurrenceOrderPlugin(),

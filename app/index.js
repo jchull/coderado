@@ -11,6 +11,7 @@
  */
 
   require("./views");
+  require("./components/svg");
 
 /* global angular */
   module.exports = angular
@@ -22,15 +23,16 @@
     "ngRoute",
     "ui.router",
     "ngMaterial",
-    "coderado.views"
+    "coderado.views",
+    "coderado.components.svg.icon"
   ])
 
   .config(function configureDevMode($logProvider, $compileProvider) {
 
-    $logProvider.debugEnabled(true);
+    $logProvider.debugEnabled(false);
 
     // disable Angular's debug info for production
-    $compileProvider.debugInfoEnabled(true);
+    $compileProvider.debugInfoEnabled(false);
   })
 
   .config(function($stateProvider, $urlRouterProvider) {
