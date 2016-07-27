@@ -2,7 +2,9 @@
   "use strict";
 
   var webpack = require('webpack'),
-    path = require('path');
+    path = require('path'),
+    CleanWebpackPlugin = require('clean-webpack-plugin');
+
 
   var ROOT = path.resolve(__dirname);
 
@@ -34,20 +36,20 @@
       // output is set to root because the middleware will use that
       // non-dev builds must set the path (see grunt webpack: build-dist)
       // set the path to ".tmp" if you want to run directly currently
-      path: "build/", // if you see " Fatal error: invalid argument " then this is not set to root "/"
+      path: "dist/", // if you see " Fatal error: invalid argument " then this is not set to root "/"
       publicPath: "/",
       filename: "[name].bundle.js"
       //https://webpack.github.io/docs/configuration.html#output-devtoolmodulefilenametemplate
       //devtoolModuleFilenameTemplate: "webpack:///[resource-path]" // maybe dropping the hash will help defualt: webpack:///[resource-path]?[hash]
     },
     resolve: {
-      modulesDirectories: ['node_modules']
+      modulesDirectories: ['./node_modules']
     },
     module: {
       loaders: [
         {
-          test: /\.css$/,
-          loader: "style!css"
+          test: /\.json$/,
+          loader: "json-loader"
         },
         {
           test: /\.eot(\?\S*)?$/,
@@ -67,24 +69,31 @@
         },
         {
           test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-          loader: "file"
+          loader: "file-loader"
         },
         {
           test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-          loader: "url?limit=10000&mimetype=image/svg+xml"
+          loader: "svg-url-loader?limit=10000&mimetype=image/svg+xml"
         },
         {
           test: /\.html$/,
-          loader: 'raw'
+          loader: 'html-loader'
         },
-        // {
-        //   test: /\.js$/,
-        //   loader: "eslint-loader",
-        //   exclude: /node_modules/
-        // },
         {
-          test: /\.json$/,
-          loader: "json-loader"
+          test: /\.jpg$/,
+          loader: "file-loader"
+        },
+        {
+          test: /\.png$/,
+          loader: "url-loader?mimetype=image/png"
+        },
+        {
+          test: /\.css$/,
+          loader: "style!css"
+        },
+        {
+          test: /index\.html/,
+          loader: "file-loader?name=[name].[ext]"
         }
       ],
       noParse: [
@@ -92,7 +101,7 @@
       ]
     },
     plugins: [
-   //   new WebpackCleanPlugin(['dist']),
+      new CleanWebpackPlugin(['dist']),
       new webpack.PrefetchPlugin(ROOT, './node_modules/angular/angular'),
       new (require('ng-annotate-webpack-plugin'))({add: true}),
       new webpack.optimize.OccurrenceOrderPlugin(),

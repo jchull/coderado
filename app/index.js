@@ -10,8 +10,12 @@
  * Main module of the application.
  */
 
+  // include index.html for webpack to load
+  //require("./index.html");
+
   require("./views");
   require("./components/svg");
+  require("./components/denver-parallax");
 
 /* global angular */
   module.exports = angular
@@ -24,7 +28,8 @@
     "ui.router",
     "ngMaterial",
     "coderado.views",
-    "coderado.components.svg.icon"
+    "coderado.components.svg.icon",
+    "coderado.components.denver-parallax"
   ])
 
   .config(function configureDevMode($logProvider, $compileProvider) {
@@ -40,7 +45,7 @@
     $stateProvider
       .state("profile", {
         url: "/profile",
-        templateUrl: "/views/profile/profile.html",
+        templateUrl: "views/profile/profile.html",
         controller: "ViewProfileController",
         controllerAs: "ctrl"
       })

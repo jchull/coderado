@@ -2,11 +2,11 @@
   -webkit-perspective: 1px;
   perspective: 1px;
   -webkit-perspective-origin: center;
-  -perspective-origin: center;
-  overflow-y: auto;
+  perspective-origin: center;
+  overflow: auto;
   overflow-x: hidden;
   margin-top: 0;
-  height: auto;
+  height: 100vh;
 }
 
 .parallax .group {
@@ -24,14 +24,6 @@
 
 .parallax svg {
 }
-
-/* TODO: investigate Safari-only SVG rendering issues */
-@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
-{ @media {
-  .parallax {
-    overflow-y: hidden;
-  }
-}}
 
 #city1 {
   fill: #111115;
@@ -83,7 +75,6 @@
 
 #mountain4 {
   fill: #8a7d9e;
-
   -webkit-transform: translateZ(-3.5px) scale(4.5);
   transform: translateZ(-3.5px) scale(4.5);
 }
@@ -91,7 +82,6 @@
 #sun {
   stroke-width: 0;
   fill: #ff7e00;
-  top: 10px;
   -webkit-transform: translateZ(-6px) scale(7);
   transform: translateZ(-6px) scale(7);
 }
@@ -105,14 +95,14 @@
   width: 100vw;
   height: 100vh;
   position: relative;
-  top: -4px;
+  margin-top: -6px;
 }
 
 .city-front {
   position: relative;
-  top: -4px;
+  margin-top: -6px;
   background-color: #111115;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 }
 
